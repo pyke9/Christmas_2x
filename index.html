@@ -339,12 +339,23 @@ VanillaTilt.init(document.querySelector(".wrapper"), {
 	document.querySelector(".wrapper").classList.remove("active");
 	btn.style.display = "block";
   });
-
+/*
   window.addEventListener('click', function () {
-	  var audio = document.querySelector('.music');
-	  audio.play();
+	 var audio = document.querySelector('.music');
+	audio.play();
   });
-
+ */ 
+// Tự phát nhạc khi người dùng click hoặc tương tác
+	let isPlayed = false; // Đảm bảo chỉ phát nhạc một lần
+	window.addEventListener("click", function () {
+		if (!isPlayed) {
+			var audio = document.querySelector(".music");
+			audio.play().catch((error) => {
+				console.error("Không thể tự động phát: ", error);
+			});
+			isPlayed = true; // Đánh dấu đã phát nhạc
+		}
+	});
 </script>
 <script src="js/index.js">
 	
