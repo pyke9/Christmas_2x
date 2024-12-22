@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('|#countdown 3||Chúc|Mừng|Giáng|Sinh|Wish you|Always||Happy|Beautiful|Smile|Lucky|Miss me!|');
+      S.UI.simulate('|#countdown 3||Chúc|Mừng|Giáng|Sinh|Wish you|Always||Happy|Beautiful|Smile|Lucky|Miss me!|Thanks YOU');
     }
 
     S.Drawing.loop(function () {
